@@ -3,22 +3,21 @@
 <head>
 	<title>Login</title>
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-
 	<h1>WELCOME TO CHAMBEROS.NET</h1>
-
-	<form>
-
-		<p>Login</p>
-
-		<img src="images/login-username-icon.png" height="20" width="20"/>
-		Username: <input type="text" name="username"/>
-		<br/>
-		<img src="images/login-password-icon.png" height="20" width="30"/>
-		Password: <input type="password" name="password"/>
-		<br/>
-		<input type="submit" value="Login" name="login-button"/>
+	<form action="dashboard.html">
+		<p id="form-title">Login</p>
+		<div>
+			<img src="images/login-username-icon.png"/>
+			<input type="text" name="username"/>
+		</div>
+		<div>
+			<img src="images/login-password-ico.png"/>
+			<input type="password" name="password"/>
+		</div>
+		<input id="login-button" type="submit" value="Login" name="login-button"/>
 
 	</form>	
 </body>
