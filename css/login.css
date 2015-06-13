@@ -27,13 +27,12 @@ form {
 	margin: 0px auto 70px auto;
 	width: 440px;
 	font-size: 20px;
-	line-height: 35px;
+	line-height: 55px;
 	color: white;
-	height: 40px;
+	height: 60px;
 	background: #333333;	
 	border: 1px solid #999;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-radius: 5px;
 }
 
 form div {
@@ -51,12 +50,14 @@ form div img {
 }
 
 form div input {
-	font-size: 24px;
+	width: 300px;
+	height: 25px;
+	font-size: 18px;
 }
 
 #login-button {
 	position: relative;
-	left: 87px;
+	left: 115px;
 	width: 100px;
 	font-size: 16px;
 	margin: 20px auto;	

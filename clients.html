@@ -1,46 +1,113 @@
 <!doctype html>
 <html>
 <head>
-	<title>Dashboard</title>
+	<title>Chamberos.net - Clients Administration</title>
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/clients.css">
 </head>
 <body>
-
-	<div>
-		<nav>
-			<ul>
-				<li>
-					<a href="">CLIENTS</a>
-				</li>
-				<li>
-					<a href="">CHAMBAS</a>
-				</li>
-				<li>
-					<a href="">INVOICES</a>
-				</li>
-				<li>
-					<a href="">HI macuna</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-	
-
-	<p>WELCOME macuna</p>
-
-	<div>
+	<nav>
 		<ul>
-			<li>	
-				<a href="">My Clients</a>
+			<li id="selected" class="menu-item">
+				<a href="">clients</a>
 			</li>
-			<li>
-				<a href="">Past Chambas</a>
+			<li class="menu-item">
+				<a href="">chambas</a>
 			</li>
-			<li>
-				<a href="">Invoices</a>
+			<li class="menu-item">
+				<a href="">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="">HI macuna</a>
 			</li>
 		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/clients.png"/>
+			<p>clients</p>
+		</div>
+		
+		<form action="">
+			<input id="button" type="button" name="nuevo-cliente" value="New Client"/>
+		</form>
 	</div>
 
+
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Full Name</th>
+			<th>Actions</th>
+		</tr>
+
+		<tr>
+			<td class="id-field">2-566-623</td>
+			<td class="name-field">Yamna Luna</td>
+			<td class="action-columns">
+				<a href="agregar-cliente.html">
+					<img src="images/editar.png"/>
+				</a>
+				<a href="eliminar-cliente.html">
+					<img src="images/eliminar.png"/>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="id-field">1-122-453</td>
+			<td class="name-field">Bladimir Arroyo</td>
+			<td class="action-columns">
+				<a href="agregar-cliente.html">
+					<img src="images/editar.png"/>
+				</a>
+				<a href="eliminar-cliente.html">
+					<img src="images/eliminar.png"/>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="id-field">4-348-201</td>
+			<td class="name-field">Sonia Segura</td>
+			<td class="action-columns">
+				<a href="agregar-cliente.html">
+					<img src="images/editar.png"/>
+				</a>
+				<a href="eliminar-cliente.html">
+					<img src="images/eliminar.png"/>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="id-field">2-725-913</td>
+			<td class="name-field">Sergio Murillo</td>
+			<td class="action-columns">
+				<a href="agregar-cliente.html">
+					<img src="images/editar.png"/>
+				</a>
+				<a href="eliminar-cliente.html">
+					<img src="images/eliminar.png"/>
+				</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="id-field">3-467-057</td>
+			<td class="name-field">Jean Miranda</td>
+			<td class="action-columns">
+				<a href="agregar-cliente.html">
+					<img src="images/editar.png"/>
+				</a>
+				<a href="eliminar-cliente.html">
+					<img src="images/eliminar.png"/>
+				</a>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
