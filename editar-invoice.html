@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Chamberos.net - Edit Invoice</title>
+	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="css/agregar.css">
 </head>
@@ -35,16 +36,22 @@
 		</form>
 	</div>
 
-	<form id="form-new" action="invoice-agregado.html" method="post">
-		<p>Invoice #</p>
-		<input type="text" name="invoice-number" value="2234"/>
-		<p>First Name</p>
-		<input type="text" name="fist-name" value="Bladimir"/>
-		<p>Last Name</p>
-		<input type="text" name="last-name" value="Arroyo"/>
-		<p>Amount</p>
-		<input type="text" name="invoice-amount" value="$150"/>		
-
+	<form id="form-new" action="editado-invoice.html" method="post">
+		<p>Client</p>
+		<input list="clients" name="invoice-clients" value="Bladimir Arroyo" required="required" autofocus="autofocus">
+		<datalist id="clients">
+			<option value="Yamna Luna"/>
+			<option value="Bladimir Arroyo"/>
+			<option value="Sonia Segura"/>
+			<option value="Sergio Murillo"/>
+			<option value="Jean Miranda"/>
+		</datalist>
+		<p>Date</p>
+		<input type="date" name="invoice-date" placeholder="dd/mm/yyyy" value="2015-06-14" required="required"/>	
+		<p>Amount ($)</p>
+		<input type="text" pattern="[0-9]+" name="invoice-amount" value="150" required="required"/>	
+		<p>Details</p>
+		<textarea rows="5" cols="30" name="invoice-detail" required="required">Construcción de una parrilla.</textarea>
 		<div>
 			<a id="cancel" href="invoices.html">Cancel</a>
 			<input id="save" class="button" type="submit" value="Save" name="save-invoice" />

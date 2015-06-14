@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - New Chamba</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="menu-item">
+				<a href="clients.html">clients</a>
+			</li>
+			<li id="selected" class="menu-item">
+				<a href="chambas.html">chambas</a>
+			</li>
+			<li class="menu-item">
+				<a href="invoices.html">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="dashboard.html">HI macuna</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/past-chambas.png"/>
+			<p>New Chamba</p>
+		</div>		
+		<form action="agregar-chamba.html" method="post">
+			<input id="button-new" class="button" type="submit" name="nueva-chamba" value="New Chamba"/>
+		</form>
+	</div>
+
+	<form id="form-new" action="editado-chamba.html" method="post">
+		<p>Client</p>
+		<input list="clients" name="chamba-clients" value="Sergio Murillo" required="required" autofocus="autofocus">
+		<datalist id="clients">
+			<option value="Yamna Luna"/>
+			<option value="Bladimir Arroyo"/>
+			<option value="Sonia Segura"/>
+			<option value="Sergio Murillo"/>
+			<option value="Jean Miranda"/>
+		</datalist>
+		<p>Date</p>
+		<input type="date" name="chamba-date" value="2015-04-06" placeholder="dd/mm/yyyy" required="required"/>	
+		<p>Details</p>
+		<textarea rows="3" cols="30" name="chamba-detail" required="required">Resparación de la tubería.</textarea>
+		<p>Notes</p>
+		<textarea rows="3" cols="30" name="chamba-notes">Se compró un tubo de 1/2</textarea>
+		<div>
+			<a id="cancel" href="chambas.html">Cancel</a>
+			<input id="save" class="button" type="submit" value="Save" name="save-chamba" />
+		</div>
+	</form>
+</body>
+</html>

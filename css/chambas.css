@@ -143,23 +143,23 @@ tr {
 }
 
 .id-field {
-	width: 13%;
-}
-
-.date-field{
 	width: 12%;
 }
 
+.date-field{
+    width: 10%;
+}
+
 .name-field {
-	width: 20%;
+	width: 16%;
 }
 
 .details-field {
-	width: 35%;
+	width: 26%;
 }
 
-.amount-field {
-	width: 10%;
+.notes-field {
+	width: 26%;
 }
 
 .action-field {
@@ -176,4 +176,3 @@ tr {
 	height: 32px;
 	width: 32px;
 }
-

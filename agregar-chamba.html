@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Chamberos.net - New Invoice</title>
+	<title>Chamberos.net - New Chamba</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="css/agregar.css">
@@ -12,10 +12,10 @@
 			<li class="menu-item">
 				<a href="clients.html">clients</a>
 			</li>
-			<li class="menu-item">
+			<li id="selected" class="menu-item">
 				<a href="chambas.html">chambas</a>
 			</li>
-			<li id="selected" class="menu-item">
+			<li class="menu-item">
 				<a href="invoices.html">invoices</a>
 			</li>
 			<li id="menu-user">
@@ -27,17 +27,17 @@
 
 	<div id="submodule-info-container">
 		<div>
-			<img src="images/invoices.png"/>
-			<p>New Invoice</p>
+			<img src="images/past-chambas.png"/>
+			<p>New Chamba</p>
 		</div>		
-		<form action="agregar-invoice.html" method="post">
-			<input id="button-new" class="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+		<form action="agregar-chamba.html" method="post">
+			<input id="button-new" class="button" type="submit" name="nueva-chamba" value="New Chamba"/>
 		</form>
 	</div>
 
-	<form id="form-new" action="agregado-invoice.html" method="post">
+	<form id="form-new" action="agregado-chamba.html" method="post">
 		<p>Client</p>
-		<input list="clients" name="invoice-clients" required="required" autofocus="autofocus">
+		<input list="clients" name="chamba-clients" required="required" autofocus="autofocus">
 		<datalist id="clients">
 			<option value="Yamna Luna"/>
 			<option value="Bladimir Arroyo"/>
@@ -46,14 +46,14 @@
 			<option value="Jean Miranda"/>
 		</datalist>
 		<p>Date</p>
-		<input type="date" name="invoice-date" placeholder="dd/mm/yyyy" required="required"/>	
-		<p>Amount ($)</p>
-		<input type="text" pattern="[0-9]+" name="invoice-amount" required="required"/>	
+		<input type="date" name="chamba-date" placeholder="dd/mm/yyyy" required="required"/>	
 		<p>Details</p>
-		<textarea rows="5" cols="30" name="invoice-detail" required="required"></textarea>
+		<textarea rows="3" cols="30" name="chamba-detail" required="required"></textarea>
+		<p>Notes</p>
+		<textarea rows="3" cols="30" name="chamba-notes"></textarea>
 		<div>
-			<a id="cancel" href="invoices.html">Cancel</a>
-			<input id="save" class="button" type="submit" value="Save" name="save-invoice" />
+			<a id="cancel" href="chambas.html">Cancel</a>
+			<input id="save" class="button" type="submit" value="Save" name="save-chamba" />
 		</div>
 	</form>
 </body>

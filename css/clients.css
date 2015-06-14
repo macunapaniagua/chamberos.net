@@ -102,10 +102,24 @@ li:hover {
 	background-color: #3cb0fd;
 }
 
-/**
+/* 
+	Successfully message 
+*/
+#successful-message {
+	width: 35%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 5px auto -35px;
+	color: white;
+	font-size: 18px;
+	background-color: #36b82b;
+	border-radius: 10px;
+}
+
+/*
 	TABLE STYLE
 */
-
 table{
 	clear: left;
 	width: 95%;

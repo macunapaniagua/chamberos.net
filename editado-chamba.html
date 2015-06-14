@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 <head>
-	<title>Chamberos.net - Invoices Administration</title>
+	<title>Chamberos.net - Chambas Administration</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="css/invoices.css">
+	<link rel="stylesheet" type="text/css" href="css/chambas.css">
 </head>
 <body>
 	<nav>
@@ -12,10 +12,10 @@
 			<li class="menu-item">
 				<a href="clients.html">clients</a>
 			</li>
-			<li class="menu-item">
+			<li id="selected" class="menu-item">
 				<a href="chambas.html">chambas</a>
 			</li>
-			<li id="selected" class="menu-item">
+			<li class="menu-item">
 				<a href="invoices.html">invoices</a>
 			</li>
 			<li id="menu-user">
@@ -27,83 +27,85 @@
 
 	<div id="submodule-info-container">
 		<div>
-			<img src="images/invoices.png"/>
-			<p>invoices</p>
+			<img src="images/past-chambas.png"/>
+			<p>chambas</p>
 		</div>		
-		<form action="agregar-invoice.html" method="get">
-			<input id="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+		<form action="agregar-chamba.html" method="get">
+			<input id="button" type="submit" name="nueva-chamba" value="New Chamba"/>
 		</form>
 	</div>
 
+	<p id="successful-message">The 'chamba' has been edited successfully</p>
+
 	<table>
 		<tr>
-			<th>Invoices #</th>
+			<th>Chambas #</th>
 			<th>Date</th>
 			<th>Client</th>
 			<th>Description</th>
-			<th>Amount</th>
+			<th>Notes</th>
 			<th>Actions</th>
 		</tr>
 		<tr>
-			<td class="id-field">2234</td>
+			<td class="id-field">1552</td>
 			<td class="date-field">15/02/2015</td>
 			<td class="name-field">Yamna Luna</td>
 			<td class="details-filed">Corte del césped</td>
-			<td class="amount-field">$50</td>
+			<td class="notes-field">Finalizada</td>
 			<td class="action-field">
-				<a href="editar-invoice.html">
+				<a href="editar-chamba.html">
 					<img src="images/editar.png"/>
 				</a>
-				<a href="eliminar-invoice.html">
+				<a href="eliminar-chamba.html">
 					<img src="images/eliminar.png"/>
 				</a>
 			</td>
 		</tr>
 		<tr>
-			<td class="id-field">2235</td>
-			<td class="date-field">19/03/2015</td>
+			<td class="id-field">1553</td>
+			<td class="date-field">01/03/2015</td>
 			<td class="name-field">Jean Miranda</td>
-			<td class="details-filed">Limpieza del jardín</td>
-			<td class="amount-field">$200</td>
+			<td class="details-filed">Limpieza</td>
+			<td class="amount-field">Finalizado</td>
 			<td class="action-field">
-				<a href="editar-invoice.html">
+				<a href="editar-chamba.html">
 					<img src="images/editar.png"/>
 				</a>
-				<a href="eliminar-invoice.html">
+				<a href="eliminar-chamba.html">
 					<img src="images/eliminar.png"/>
 				</a>
 			</td>
 		</tr>
 		<tr>
-			<td class="id-field">2236</td>
+			<td class="id-field">1554</td>
 			<td class="date-field">06/04/2015</td>
 			<td class="name-field">Sergio Murillo</td>
 			<td class="details-filed">Resparación de la tubería.</td>
-			<td class="amount-field">$75</td>
+			<td class="amount-field">Se compró un tubo de 1/2</td>
 			<td class="action-field">
-				<a href="editar-invoice.html">
+				<a href="editar-chamba.html">
 					<img src="images/editar.png"/>
 				</a>
-				<a href="eliminar-invoice.html">
+				<a href="eliminar-chamba.html">
 					<img src="images/eliminar.png"/>
 				</a>
 			</td>
 		</tr>
 		<tr>
-			<td class="id-field">2237</td>
+			<td class="id-field">1555</td>
 			<td class="date-field">21/04/2015</td>
 			<td class="name-field">Bladimir Arroyo</td>
 			<td class="details-filed">Construcción de una parrilla.</td>
-			<td class="amount-field">$150</td>
+			<td class="amount-field">En curso</td>
 			<td class="action-field">
-				<a href="editar-invoice.html">
+				<a href="editar-chamba.html">
 					<img src="images/editar.png"/>
 				</a>
-				<a href="eliminar-invoice.html">
+				<a href="eliminar-chamba.html">
 					<img src="images/eliminar.png"/>
 				</a>
 			</td>
-		</tr>		
+		</tr>
 	</table>
 </body>
 </html>

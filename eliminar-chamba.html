@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Chamberos.net - Delete Invoice</title>
+	<title>Chamberos.net - Delete Chamba</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="css/eliminar.css">
@@ -12,10 +12,10 @@
 			<li class="menu-item">
 				<a href="clients.html">clients</a>
 			</li>
-			<li class="menu-item">
+			<li id="selected" class="menu-item">
 				<a href="chambas.html">chambas</a>
 			</li>
-			<li id="selected" class="menu-item">
+			<li class="menu-item">
 				<a href="invoices.html">invoices</a>
 			</li>
 			<li id="menu-user">
@@ -27,21 +27,21 @@
 
 	<div id="submodule-info-container">
 		<div>
-			<img src="images/clients.png"/>
-			<p>delete invoice</p>
+			<img src="images/past-chambas.png"/>
+			<p>delete chamba</p>
 		</div>		
-		<form action="agregar-invoice.html" method="get">
-			<input id="button-new" class="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+		<form action="agregar-chamba.html" method="get">
+			<input id="button-new" class="button" type="submit" name="nueva-chamba" value="New Chamba"/>
 		</form>
 	</div>
 
-	<p id="confirmation-message">Are you sure you want to delete the invoice #2234?</p>	
+	<p id="confirmation-message">Are you sure you want to delete the chamba #1554?</p>	
 
 	<div id="buttons-container">
-		<form action="invoices.html" method="get">
+		<form action="chambas.html" method="get">
 			<input id="cancel" class="button" type="submit" value="No" name="cancel" />
 		</form>
-		<form action="eliminado-invoice.html" method="post">
+		<form action="eliminado-chamba.html" method="post">
 			<input id="save" class="button" type="submit" value="Yes" name="save-client" />
 		</form>
 	</div>	
