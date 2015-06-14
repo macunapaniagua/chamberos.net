@@ -36,13 +36,14 @@
 	</div>
 
 	<form id="form-new" action="cliente-agregado.html" method="post">
-		<p>First Name</p>
-		<input type="text" name="fist-name" value="Bladimir"/>
-		<p>Last Name</p>
-		<input type="text" name="last-name" value="Arroyo"/>
 		<p>ID</p>
-		<input type="text" name="client-id" value="1-122-453"/>
-
+		<input type="text" name="client-id" value="1-122-453" required="required" autofocus="autofocus"/>
+		<p>First Name</p>
+		<input type="text" name="fist-name" value="Bladimir" required="required"/>
+		<p>Last Name</p>
+		<input type="text" name="last-name" value="Arroyo" required="required"/>
+		<p>Phone</p>
+		<input type="tel" value="84-59-76-15" pattern="\b\d{2}[-.]?\d{2}[-.]?\d{2}[-.]?\d{2}\b" name="client-phone" required="required"/>
 		<div>
 			<a id="cancel" href="clients.html">Cancel</a>
 			<form>

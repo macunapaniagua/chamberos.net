@@ -36,12 +36,14 @@
 	</div>
 
 	<form id="form-new" action="cliente-agregado.html" method="post">
-		<p>First Name</p>
-		<input type="text" name="fist-name"/>
-		<p>Last Name</p>
-		<input type="text" name="last-name"/>
 		<p>ID</p>
-		<input type="text" name="client-id"/>
+		<input type="text" name="client-id" required="required" autofocus = "autofocus"/>
+		<p>First Name</p>
+		<input type="text" name="fist-name" required="required"/>
+		<p>Last Name</p>
+		<input type="text" name="last-name" required="required"/>
+		<p>Phone</p>
+		<input type="tel" pattern="\b\d{2}[-.]?\d{2}[-.]?\d{2}[-.]?\d{2}\b" name="client-phone" required="required"/>
 		<div>
 			<a id="cancel" href="clients.html">Cancel</a>
 			<input id="save" class="button" type="submit" value="Save" name="save-client" />
