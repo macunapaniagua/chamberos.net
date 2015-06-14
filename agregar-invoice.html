@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - New Client</title>
+	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="menu-item">
+				<a href="clients.html">clients</a>
+			</li>
+			<li class="menu-item">
+				<a href="chambas.html">chambas</a>
+			</li>
+			<li id="selected" class="menu-item">
+				<a href="invoices.html">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="dashboard.html">HI macuna</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/invoices.png"/>
+			<p>New Invoice</p>
+		</div>		
+		<form action="agregar-invoice.html" method="post">
+			<input id="button-new" class="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+		</form>
+	</div>
+
+	<form id="form-new" action="invoice-agregado.html" method="post">
+		<p>Invoice #</p>
+		<input type="text" name="invoice-number"/>
+		<p>First Name</p>
+		<input type="text" name="fist-name"/>
+		<p>Last Name</p>
+		<input type="text" name="last-name"/>
+		<p>Amount</p>
+		<input type="text" name="invoice-amount"/>	
+		<div>
+			<a id="cancel" href="invoices.html">Cancel</a>
+			<input id="save" class="button" type="submit" value="Save" name="save-invoice" />
+		</div>
+	</form>
+</body>
+</html>

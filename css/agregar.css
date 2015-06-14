@@ -89,69 +89,64 @@ li:hover {
 	text-transform: uppercase;
 }
 
-#button {
+.button {
 	border: none;
 	border-radius: 5px;
-	background-color: #3498DB;
-	padding: 5px 10px 5px 10px;
-	font-size: 20px;
+	padding: 5px 10px 5px 10px;	
 	color: white;
 }
 
-#button:hover{
+.button#button-new {
+	font-size: 20px;
+	background-color: #3498DB;
+}
+
+.button#button-new:hover{
 	background-color: #3cb0fd;
 }
 
 /**
-	TABLE STYLE
+	FORM STYLE
 */
 
-table{
-	clear: left;
-	width: 95%;
-    border-collapse: collapse;
-	margin: 50px auto 0px;
-}
-
-th {
-	color: white;
-	border-collapse: collapse;
-	background-color: #3498DB;
-	border-top-right-radius: 30px;
-	border-bottom-left-radius: 30px;
-	border-color: white;
-	padding: 3px 5px 3px 5px;
-}
-
-tr {
-	text-align: center;
-	padding: 3px 5px 3px 5px;
-}
-
-.id-field {
-	width: 20%;
-}
-
-.name-field {
+#form-new {
+	clear: both;
 	width: 40%;
+	margin: 50px auto 0;
 }
 
-.amount-field {
-	width: 20%;
+#form-new p {
+	margin: 10px 0 3px 0;
 }
 
-.action-field {
-	width: 20%;
-	text-align: right;
-	padding-right: 20px;		
+#form-new input {
+	width: 100%;
+	padding: 3px 5px 3px 5px;
+	border: 0.5px solid #ccc;
+	border-radius: 5px;
 }
 
-.action-field a {
-	text-decoration: none;
+#form-new div {
+	height: 29px;
+	margin-top: 20px;
 }
 
-.action-field a img {
-	height: 32px;
-	width: 32px;
+#cancel {
+	line-height: 29px;
+	font-size: 16px;
+	color: #f35d5d;
 }
+
+.button#save {
+	float: right;
+	width: 18%;
+	font-size: 16px;
+	background-color: #36b82b;
+	margin-right: -5px;
+}
+
+.button#save:hover{
+	background-color: #5dcc2d;
+}
+
 

@@ -9,16 +9,17 @@
 	<h1>WELCOME TO CHAMBEROS.NET</h1>
 	<form action="dashboard.html">
 		<p id="form-title">Login</p>
-		<div>
+		<div class="text-field">
 			<img src="images/login-username-icon.png"/>
-			<input type="text" name="username" value placeholder="Type your username"/>
+			<input type="text" name="username" placeholder="Type your username"/>
+		</div>
+		<div class="text-field">
+			<img src="images/login-password-ico.png"/>
+			<input type="password" name="password" placeholder="Type your password"/>
 		</div>
 		<div>
-			<img src="images/login-password-ico.png"/>
-			<input type="password" name="password" value placeholder="Type your password"/>
+			<input id="login-button" type="submit" value="Login" name="login-button"/>
 		</div>
-		<input id="login-button" type="submit" value="Login" name="login-button"/>
-
 	</form>	
 </body>
 </html>

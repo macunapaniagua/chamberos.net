@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - Edit Client</title>
+	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li id="selected" class="menu-item">
+				<a href="clients.html">clients</a>
+			</li>
+			<li class="menu-item">
+				<a href="chambas.html">chambas</a>
+			</li>
+			<li class="menu-item">
+				<a href="invoices.html">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="dashboard.html">HI macuna</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/clients.png"/>
+			<p>Edit Client</p>
+		</div>
+		
+		<form action="agregar-cliente.html" method="get">
+			<input id="button-new" class="button" type="submit" name="nuevo-cliente" value="New Client"/>
+		</form>
+	</div>
+
+	<form id="form-new" action="cliente-agregado.html" method="post">
+		<p>First Name</p>
+		<input type="text" name="fist-name" value="Bladimir"/>
+		<p>Last Name</p>
+		<input type="text" name="last-name" value="Arroyo"/>
+		<p>ID</p>
+		<input type="text" name="client-id" value="1-122-453"/>
+
+		<div>
+			<a id="cancel" href="clients.html">Cancel</a>
+			<form>
+				<input id="save" class="button" type="submit" value="Save" name="save-client" />
+			</form>
+		</div>
+	</form>
+</body>
+</html>

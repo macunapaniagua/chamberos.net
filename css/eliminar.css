@@ -89,69 +89,57 @@ li:hover {
 	text-transform: uppercase;
 }
 
-#button {
+.button {
 	border: none;
 	border-radius: 5px;
-	background-color: #3498DB;
-	padding: 5px 10px 5px 10px;
-	font-size: 20px;
+	padding: 5px 10px 5px 10px;	
 	color: white;
 }
 
-#button:hover{
+.button#button-new {
+	font-size: 20px;
+	background-color: #3498DB;
+}
+
+.button#button-new:hover{
 	background-color: #3cb0fd;
 }
 
-/**
-	TABLE STYLE
+/** 
+	Confirmation Message
 */
-
-table{
-	clear: left;
-	width: 95%;
-    border-collapse: collapse;
-	margin: 50px auto 0px;
-}
-
-th {
-	color: white;
-	border-collapse: collapse;
-	background-color: #3498DB;
-	border-top-right-radius: 30px;
-	border-bottom-left-radius: 30px;
-	border-color: white;
-	padding: 3px 5px 3px 5px;
-}
-
-tr {
-	text-align: center;
-	padding: 3px 5px 3px 5px;
-}
-
-.id-field {
-	width: 20%;
-}
-
-.name-field {
+#confirmation-message {
 	width: 40%;
+	margin: 90px auto 0px;
+	text-align: center;
+	font-size: 18px;
 }
 
-.amount-field {
+#buttons-container {
+	width: 45%;
+	margin: 70px auto 0px;
+}
+
+.button#cancel {
+	float: left;
 	width: 20%;
+	font-size: 16px;
+	margin-left: 80px;
+	background-color: #e81212;
 }
 
-.action-field {
+.button#cancel:hover{
+	background-color: #f72525;
+}
+
+.button#save {
+	float: right;
 	width: 20%;
-	text-align: right;
-	padding-right: 20px;		
+	font-size: 16px;
+	margin-right: 80px;
+	background-color: #36b82b;
 }
 
-.action-field a {
-	text-decoration: none;
+.button#save:hover{
+	background-color: #5dcc2d;
 }
-
-.action-field a img {
-	height: 32px;
-	width: 32px;
-}
-

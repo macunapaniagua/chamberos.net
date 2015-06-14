@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - Clients Administration</title>
+	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/eliminar.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="menu-item">
+				<a href="clients.html">clients</a>
+			</li>
+			<li class="menu-item">
+				<a href="chambas.html">chambas</a>
+			</li>
+			<li id="selected" class="menu-item">
+				<a href="invoices.html">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="dashboard.html">HI macuna</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/clients.png"/>
+			<p>delete invoice</p>
+		</div>		
+		<form action="agregar-invoice.html" method="get">
+			<input id="button-new" class="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+		</form>
+	</div>
+
+	<p id="confirmation-message">Are you sure you want to delete the invoice #2234?</p>	
+
+	<div id="buttons-container">
+		<form action="invoices.html" method="get">
+			<input id="cancel" class="button" type="submit" value="No" name="cancel" />
+		</form>
+		<form action="invoice-eliminado.html" method="post">
+			<input id="save" class="button" type="submit" value="Yes" name="save-client" />
+		</form>
+	</div>	
+</body>
+</html>

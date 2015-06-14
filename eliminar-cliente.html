@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - Clients Administration</title>
+	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/eliminar.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li id="selected" class="menu-item">
+				<a href="clients.html">clients</a>
+			</li>
+			<li class="menu-item">
+				<a href="">chambas</a>
+			</li>
+			<li class="menu-item">
+				<a href="invoices.html">invoices</a>
+			</li>
+			<li id="menu-user">
+				<img src="images/user-menu-icon.png"/>
+				<a href="dashboard.html">HI macuna</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="submodule-info-container">
+		<div>
+			<img src="images/clients.png"/>
+			<p>delete client</p>
+		</div>
+		<form action="agregar-cliente.html" method="get">
+			<input id="button-new" class="button" type="submit" name="nuevo-cliente" value="New Client"/>
+		</form>
+	</div>
+
+	<p id="confirmation-message">Are you sure you want to delete the client with name <q>Bladimir Arroyo</q>?</p>	
+
+	<div id="buttons-container">
+		<form action="clients.html" method="get">
+			<input id="cancel" class="button" type="submit" value="No" name="save-client" />
+		</form>
+		<form action="cliente-eliminado.html" method="post">
+			<input id="save" class="button" type="submit" value="Yes" name="save-client" />
+		</form>
+	</div>
+</body>
+</html>

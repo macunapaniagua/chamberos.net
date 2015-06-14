@@ -1,7 +1,6 @@
 body {
 	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	background: #EEE url("../images/background.png");
 	background-repeat: repeat;
 	font-family: "Helvetica Neue";
@@ -11,56 +10,65 @@ body {
 /* Style for Welcome Label */
 h1 {
 	text-align: center;
-	width: 500px;
-	margin: 70px auto 40px auto;
+	margin-top: 70px;	
 	font-size: 24px;
+	color: #333;
 }
 
 form {
-	display: inline-block;	
-	border: 1px solid #888;
-	border-radius: 5px;
-	height: 340px;
+	width: 45%;
+	height: 280px;
+	margin: 70px auto 0;
+	border: 1px solid #aaa;
+	background-color: #eeeeee
 }
 
-#form-title {	
-	margin: 0px auto 70px auto;
-	width: 440px;
-	font-size: 20px;
-	line-height: 55px;
-	color: white;
+#form-title {
 	height: 60px;
-	background: #333333;	
-	border: 1px solid #999;
-	border-radius: 5px;
+	line-height: 60px;	
+	margin: 0 auto 45px;	
+	font-size: 22px;	
+	color: white;	
+	background: #333;	
 }
 
-form div {
-	width: 440px;
-	display: block;
-	margin-top: 15px;
-	font-size: 20px;
-	vertical-align: middle;
-}
-
-form div img {
-	height: 20px;
-	width: 20px;
-	vertical-align: middle;	
-}
-
-form div input {
+div {
 	width: 300px;
-	height: 25px;
-	font-size: 18px;
+	margin: 12px auto 0;
+}
+
+.text-field {	
+	height: 35px;		
+}
+
+.text-field img {
+	float: left;
+	width: 24px;
+	height: 24px;
+}
+
+.text-field input {
+	margin-top: 0;
+	width: 260px;
+	height: 25px;	
+	font-size: 16px;
+	padding: 3px 5px 3px 5px;
+	border: 0.5px solid #ccc;
+	border-radius: 5px;	
 }
 
 #login-button {
-	position: relative;
-	left: 115px;
-	width: 100px;
+	float: right;
+	border: none;
+	border-radius: 5px;
+	background-color: #3498DB;
+	padding: 5px 10px 5px 10px;
 	font-size: 16px;
-	margin: 20px auto;	
+	color: white;
+}
+
+#login-button:hover{
+	background-color: #3cb0fd;
 }
 
 
