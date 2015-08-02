@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" href="../css/login.css" type="text/css">
+	<script src="../js/login.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h2>WELCOME TO CHAMBEROS.NET</h2>
+		<form class="form-signin">
+			<h3 id="form-title" class="form-signin-header">Login</h3>
+			<input 	id="username-field" class="form-control" type="text" name="username" required="required" 
+			autofocus="autofocus" placeholder="Type your username"/>
+			<input id="password-field" class="form-control" type="password" name="password" placeholder="Type your password"/>
+			<button id="login-button" class="btn btn-primary btn-block" type="button" name="login-button" onClick="logInUser()">Login</button>
+		</form>	
+	</div>
+</body>
+</html>
