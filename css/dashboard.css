@@ -1,13 +1,10 @@
 body {
-	width: 1000px;
 	margin: 0 auto;
-	font-family: "Helvetica Neue";
 	background: #EEE url("../images/background.png");
 	background-repeat: repeat;
 }
 
-nav {
-	height: 55px;
+/*	height: 80px;
 	background: #333333;	
 	border: 1px solid #999;	
 	border-radius: 10px;
@@ -19,9 +16,10 @@ nav ul {
 	margin: 0;
 }
 
-/*	ELEMENTOS DE LA LISTA */
+/*	ELEMENTOS DE LA LISTA 
 li {
-	width: 150px;
+	width: 100px;
+	margin-right: 10px;
 	height: 55px;
 	line-height: 55px;
 	text-align: center;
@@ -39,14 +37,14 @@ li:hover {
 
 /* PROPIEDADES ESPECIFICAS PARA LOS ELEMENTOS DEL MENU SUPERIOR */
 
-/* Opciones del menu (lado izquierdo) */
+/* Opciones del menu (lado izquierdo) 
 .menu-item {
 	float: left;	
 	border-right: 1px solid #222;
 	box-shadow: 1px 0px 0px #444;
 }
 
-/* Usuario (Opción del lado derecho) */
+/* Usuario (Opción del lado derecho) 
 #menu-user{
 	float: right;		
 	padding: 0 10px 0 10px;
@@ -57,7 +55,7 @@ li:hover {
 	width: 48px;
 	float: left;
 }
-
+*/
 
 
 

@@ -2,72 +2,111 @@
 <html>
 <head>
 	<title>Chamberos.net - Dashboard</title>
-	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<!-- Bootstrap files and JQuery -->
-	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
 	<script src="../jquery/jquery-1.11.3.min.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- My Css files -->
-	<link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="../css/dashboard.css"/> <!---->
 	<script src="../js/dashboard.js"></script>
-
-
-
 </head>
+
 <body>
-	<nav>
-		<ul>
-			<li class="menu-item">
-				<a href="clients.html">clients</a>
-			</li>
-			<li class="menu-item">
-				<a href="chambas.html">chambas</a>
-			</li>
-			<li class="menu-item">
-				<a href="invoices.html">invoices</a>
-			</li>
-			<li id="menu-user">
-				<img src="../images/user-menu-icon.png"/>
-				<a href="dashboard.html">HI macuna</a>
-			</li>
-		</ul>
-	</nav>	
+	<div class="container-fluid">
 
-	<div><p id="welcome">WELCOME macuna</p></div>
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">
+						<img heigh="32px" width="32px" src="../images/chamberos-logo.png"/>
+						Chamberos
+					</a>
+				</div>
 
-	<div id="dashboard-options-container">		
-		<div class="dashboard-option">
-			<a href="clients.html">
-				<img src="../images/clients.png"/>
-				<p>My Clients</p>
-			</a>		
-		</div>		
-		<div class="dashboard-option">
-			<a href="chambas.html">
-				<img src="../images/past-chambas.png"/>
-				<p>Past Chambas</p>
-			</a>
-		</div>		
-		<div class="dashboard-option">
-			<a href="invoices.html">
-				<div>
-					<img src="../images/invoices.png"/>
-					<p>Invoices</p>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+
+					<ul class="nav navbar-nav navbar-right">
+						<li id="menu-user" class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<img src="../images/user-menu-icon.png"/>HI macuna
+								<span class="caret"></span></a>
+
+								<ul class="dropdown-menu">
+									<li>
+										<a href="dashboard.html">Dashboard</a>
+									</li>
+									<li>
+										<a href="index.html">Logout</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</a>
-		</div>
-		<div id="users-module" class="dashboard-option">
-			<a href="users.html">
-				<div>
-					<img src="../images/ic_add_user.png"/>
-					<p>Users</p>
+			</nav>
+
+
+
+			<div><p id="welcome">WELCOME macuna</p></div>
+
+			<div id="dashboard-options-container">		
+				<div class="dashboard-option">
+					<a href="clients.html">
+						<img src="../images/clients.png"/>
+						<p>My Clients</p>
+					</a>		
+				</div>		
+				<div class="dashboard-option">
+					<a href="chambas.html">
+						<img src="../images/past-chambas.png"/>
+						<p>Past Chambas</p>
+					</a>
+				</div>		
+				<div class="dashboard-option">
+					<a href="invoices.html">
+						<div>
+							<img src="../images/invoices.png"/>
+							<p>Invoices</p>
+						</div>
+					</a>
 				</div>
-			</a>
+				<div id="users-module" class="dashboard-option">
+					<a href="users.html">
+						<div>
+							<img src="../images/ic_add_user.png"/>
+							<p>Users</p>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
