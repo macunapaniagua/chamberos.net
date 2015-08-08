@@ -2,108 +2,137 @@
 <html>
 <head>
 	<title>Chamberos.net - Invoices Administration</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="css/invoices.css">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
+	<link rel="stylesheet" type="text/css" href="../css/invoices.css"/>
+	<script src="../js/invoices.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li class="menu-item">
-				<a href="clients.html">clients</a>
-			</li>
-			<li class="menu-item">
-				<a href="chambas.html">chambas</a>
-			</li>
-			<li id="selected" class="menu-item">
-				<a href="invoices.html">invoices</a>
-			</li>
-			<li id="menu-user">
-				<img src="images/user-menu-icon.png"/>
-				<a href="dashboard.html">HI macuna</a>
-			</li>
-		</ul>
-	</nav>
+	<div class="container-fluid">
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
 
-	<div id="submodule-info-container">
-		<div>
-			<img src="images/invoices.png"/>
-			<p>invoices</p>
-		</div>		
-		<form action="agregar-invoice.html" method="get">
-			<input id="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
-		</form>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">				
+			<div class="thumbnail">
+				<a href="invoices.html">		
+					<img src="../images/invoices.png"/>
+					<div class="caption">
+						<h4>Invoices</h4>
+					</div>
+				</a>
+			</div>				
+			<button id="btn-new" class="btn btn-primary">New Invoices</button>
+		</div>
+
+
+		<div id="table-container">
+
+			<!-- Alert Box -->	
+			<div id="message" class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong> The invoices has been created successfully.</strong>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table">
+
+
+
+
+
+
+					<tr>
+						<th>Invoices #</th>
+						<th>Date</th>
+						<th>Client</th>
+						<th>Description</th>
+						<th>Amount</th>
+						<th>Actions</th>
+					</tr>
+					<tr>
+						<td class="id-field">2234</td>
+						<td class="date-field">15/02/2015</td>
+						<td class="name-field">Yamna Luna</td>
+						<td class="details-filed">Corte del césped</td>
+						<td class="amount-field">$50</td>
+						<td class="action-field">
+							<a href="editar-invoice.html">
+								<img src="images/editar.png"/>
+							</a>
+							<a href="eliminar-invoice.html">
+								<img src="images/eliminar.png"/>
+							</a>
+						</td>
+					</tr>
+
+
+
+
+
+							
+				</table>
+			</div>
+		</div>
 	</div>
-
-	<table>
-		<tr>
-			<th>Invoices #</th>
-			<th>Date</th>
-			<th>Client</th>
-			<th>Description</th>
-			<th>Amount</th>
-			<th>Actions</th>
-		</tr>
-		<tr>
-			<td class="id-field">2234</td>
-			<td class="date-field">15/02/2015</td>
-			<td class="name-field">Yamna Luna</td>
-			<td class="details-filed">Corte del césped</td>
-			<td class="amount-field">$50</td>
-			<td class="action-field">
-				<a href="editar-invoice.html">
-					<img src="images/editar.png"/>
-				</a>
-				<a href="eliminar-invoice.html">
-					<img src="images/eliminar.png"/>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="id-field">2235</td>
-			<td class="date-field">19/03/2015</td>
-			<td class="name-field">Jean Miranda</td>
-			<td class="details-filed">Limpieza del jardín</td>
-			<td class="amount-field">$200</td>
-			<td class="action-field">
-				<a href="editar-invoice.html">
-					<img src="images/editar.png"/>
-				</a>
-				<a href="eliminar-invoice.html">
-					<img src="images/eliminar.png"/>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="id-field">2236</td>
-			<td class="date-field">06/04/2015</td>
-			<td class="name-field">Sergio Murillo</td>
-			<td class="details-filed">Resparación de la tubería.</td>
-			<td class="amount-field">$75</td>
-			<td class="action-field">
-				<a href="editar-invoice.html">
-					<img src="images/editar.png"/>
-				</a>
-				<a href="eliminar-invoice.html">
-					<img src="images/eliminar.png"/>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="id-field">2237</td>
-			<td class="date-field">21/04/2015</td>
-			<td class="name-field">Bladimir Arroyo</td>
-			<td class="details-filed">Construcción de una parrilla.</td>
-			<td class="amount-field">$150</td>
-			<td class="action-field">
-				<a href="editar-invoice.html">
-					<img src="images/editar.png"/>
-				</a>
-				<a href="eliminar-invoice.html">
-					<img src="images/eliminar.png"/>
-				</a>
-			</td>
-		</tr>		
-	</table>
 </body>
 </html>

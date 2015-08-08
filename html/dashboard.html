@@ -12,7 +12,9 @@
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- My Css files -->
-		<link rel="stylesheet" type="text/css" href="../css/dashboard.css"/> <!---->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dashboard.css"/>
 	<script src="../js/dashboard.js"></script>
 </head>
 
@@ -50,65 +52,64 @@
 
 
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								
-								<img id="menu-user" src="../images/user-menu-icon.png"/>
-								HI macuna
-								<span class="caret"></span></a>
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
 
-								<ul class="dropdown-menu">
-									<li>
-										<a href="dashboard.html">Dashboard</a>
-									</li>
-									<li>
-										<a href="index.html">Logout</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
-			</nav>
+			</div>
+		</nav>
 
+		<div>
+			<p id="welcome" class="img-responsive">WELCOME</p>
+		</div>
 
-
-			<div>
-				<p class="img-responsive" id="welcome">
-					WELCOME macuna
-				</p>
+		<div id="dashboard-options-container">	
+			<div class="thumbnail">
+				<a href="clients.html">		
+					<img src="../images/clients.png">
+					<div class="caption">
+						<h4>My Clients</h4>
+					</div>
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="chambas.html">		
+					<img src="../images/past-chambas.png">
+					<div class="caption">
+						<h4>Past Chambas</h4>
+					</div>
+				</a>
 			</div>
 
-			<div id="dashboard-options-container">		
-				<div class="dashboard-option">
-					<a href="clients.html">
-						<img class="img-responsive" src="../images/clients.png"/>
-						<p>My Clients</p>
-					</a>		
-				</div>		
-				<div class="dashboard-option">
-					<a href="chambas.html">
-						<img src="../images/past-chambas.png"/>
-						<p>Past Chambas</p>
-					</a>
-				</div>		
-				<div class="dashboard-option">
-					<a href="invoices.html">
-						<div>
-							<img src="../images/invoices.png"/>
-							<p>Invoices</p>
-						</div>
-					</a>
-				</div>
-				<div id="users-module" class="dashboard-option">
-					<a href="users.html">
-						<div>
-							<img src="../images/ic_add_user.png"/>
-							<p>Users</p>
-						</div>
-					</a>
-				</div>
+			<div class="thumbnail">
+				<a href="invoices.html">		
+					<img src="../images/invoices.png">
+					<div class="caption">
+						<h4>Invoices</h4>
+					</div>
+				</a>
+			</div>
+
+			<div class="thumbnail">
+				<a href="users.html">		
+					<img src="../images/ic_add_user.png">
+					<div class="caption">
+						<h4>Users</h4>
+					</div>
+				</a>
 			</div>
 		</div>
-	</body>
-	</html>
+	</div>
+</body>
+</html>

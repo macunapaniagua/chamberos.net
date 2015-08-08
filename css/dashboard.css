@@ -1,91 +1,18 @@
-body {
-	margin: 0 auto;
-	background: #EEE url("../images/background.png");
-	background-repeat: repeat;
-}
-
-#menu-user {
-	height: 48px;
-	width: 48px;
-}
-
-.navbar-nav li a{
-	line-height: 45px;
-}
-
-li:hover {	
-	background: #444444;
-	border-radius: 10px;
-}
-
-/*	ELEMENTOS DE LA LISTA */
-li {
-	margin-right: 10px;
-}
-
-
-
-
-/* PROPIEDADES ESPECIFICAS PARA LOS ELEMENTOS DEL MENU SUPERIOR */
-
-/* Opciones del menu (lado izquierdo) 
-.menu-item {
-	float: left;	
-	border-right: 1px solid #222;
-	box-shadow: 1px 0px 0px #444;
-}
-
-/* Usuario (Opción del lado derecho) 
-#menu-user{
-	float: right;		
-	padding: 0 10px 0 10px;
-}
-
-#menu-user img {
-	height: 48px;
-	width: 48px;
-	float: left;
-}
-*/
-
-
-
-
-
 /* Style for Welcome Label */
 #welcome {	
-	width: 400px;
-	margin: 70px auto 0;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 5% auto 5%;
 	text-align: center;
 	font-size: 30px;	
+	word-wrap: break-word;
 }
 
 /* Dashboard Container */
 #dashboard-options-container {
+	position: relative;
+	padding-top: 5%;
+	padding-bottom: 10%;
 	text-align: center;
-	margin: 100px auto 0;	
 }
-
-.dashboard-option{
-	display: inline-block;
-	width: 100px;
-	margin: 0px 40px 0px 40px;
-}
-
-.dashboard-option a {	
-	color: #555;
-	text-decoration: none;
-}
-
-.dashboard-option img {	
-	display: block;
-	margin-right: 0px auto 0px;
-}
-
-
-
-
-
-
-
-

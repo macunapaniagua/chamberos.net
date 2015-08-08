@@ -2,67 +2,129 @@
 <html>
 <head>
 	<title>Chamberos.net - Clients Administration</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="../css/clients.css">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
+	<link rel="stylesheet" type="text/css" href="../css/clients.css"/>
+	<script src="../js/clients.js"></script>
 </head>
+
 <body>
-	<nav>
-		<ul>
-			<li id="selected" class="menu-item">
-				<a href="clients.html">clients</a>
-			</li>
-			<li class="menu-item">
-				<a href="chambas.html">chambas</a>
-			</li>
-			<li class="menu-item">
-				<a href="invoices.html">invoices</a>
-			</li>
-			<li id="menu-user">
-				<img src="../images/user-menu-icon.png"/>
-				<a href="dashboard.html">HI macuna</a>
-			</li>
-		</ul>
-	</nav>
+	<div class="container-fluid">
 
-	<div id="submodule-info-container">
-		<div>
-			<img src="../images/clients.png"/>
-			<p>clients</p>
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">				
+			<div class="thumbnail">
+				<a href="clients.html">		
+					<img src="../images/clients.png"/>
+					<div class="caption">
+						<h4>Clients</h4>
+					</div>
+				</a>
+			</div>				
+			<button id="btn-new" class="btn btn-primary">New Client</button>
 		</div>
-		
-		<form action="agregar-cliente.html" method="get">
-			<input id="button" type="submit" name="nuevo-cliente" value="New Client"/>
-		</form>
-	</div>
+
+		<div id="table-container">
+
+			<!-- Alert Box -->	
+			<div id="message" class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong> The client has been created successfully.</strong>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table">
+					
+
+					<tr>
+						<th>ID</th>
+						<th>Full Name</th>
+						<th>Phone</th>
+						<th>Actions</th>
+					</tr>
+
+					<tr>
+						<td class="id-field">2-566-623</td>
+						<td class="name-field">Yamna Luna</td>
+						<td class="phone-field">64910576</td>
+						<td class="action-columns">
+							<a href="editar-cliente.html">
+								<img src="../images/editar.png"/>
+							</a>
+							<a href="eliminar-cliente.html">
+								<img src="../images/eliminar.png"/>
+							</a>
+						</td>
+					</tr>	
 
 
+				</table>
+			</div>
+		</div>
 
 
-
-	<div class="table-responsive">
-		<table class="table">
-			<tr>
-				<th>ID</th>
-				<th>Full Name</th>
-				<th>Phone</th>
-				<th>Actions</th>
-			</tr>
-
-			<tr>
-				<td class="id-field">2-566-623</td>
-				<td class="name-field">Yamna Luna</td>
-				<td class="phone-field">64910576</td>
-				<td class="action-columns">
-					<a href="editar-cliente.html">
-						<img src="../images/editar.png"/>
-					</a>
-					<a href="eliminar-cliente.html">
-						<img src="../images/eliminar.png"/>
-					</a>
-				</td>
-			</tr>	
-		</table>
 	</div>
 </body>
 </html>

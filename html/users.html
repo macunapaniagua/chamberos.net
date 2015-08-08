@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Chamberos.net - Chambas Administration</title>
+	<title>Chamberos.net - Users Administration</title>
 	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -14,9 +14,10 @@
 	<!-- My Css files -->
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
-	<link rel="stylesheet" type="text/css" href="../css/chambas.css"/>
-	<script src="../js/chambas.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/users.css"/>
+	<script src="../js/users.js"></script>
 </head>
+
 <body>
 	<div class="container-fluid">
 
@@ -71,70 +72,66 @@
 			</div>
 		</nav>
 
+		<!-- Header panel -->
 		<div class="jumbotron">				
 			<div class="thumbnail">
-				<a href="clients.html">		
-					<img src="../images/past-chambas.png"/>
+				<a href="users.html">		
+					<img src="../images/ic_add_user.png"/>
 					<div class="caption">
-						<h4>Chambas</h4>
+						<h4>Users</h4>
 					</div>
 				</a>
 			</div>				
-			<button id="btn-new" class="btn btn-primary">New Chamba</button>
+			<button id="btn-new" class="btn btn-primary">New User</button>
 		</div>
 
 		<div id="table-container">
+
 			<!-- Alert Box -->	
 			<div id="message" class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<strong> The chamba has been created successfully.</strong>
+				<strong> The user has been created successfully.</strong>
 			</div>
+
+
+
+
+
+
 
 			<div class="table-responsive">
-				<table class="table">
-
-
-
-
-
-
-
-
+				<table class="table">	
 					<tr>
-						<th>Chambas #</th>
-						<th>Date</th>
-						<th>Client</th>
-						<th>Description</th>
-						<th>Notes</th>
+						<th>ID</th>
+						<th>Full Name</th>
+						<th>Password</th>
 						<th>Actions</th>
 					</tr>
+
 					<tr>
-						<td class="id-field">1553</td>
-						<td class="date-field">21/04/2015</td>
-						<td class="name-field">Bladimir Arroyo</td>
-						<td class="details-filed">Construcción de una parrilla.</td>
-						<td class="amount-field">En curso</td>
-						<td class="action-field">
-							<a href="editar-chamba.html">
-								<img src="images/editar.png"/>
+						<td class="id-field">2-566-623</td>
+						<td class="name-field">Yamna Luna</td>
+						<td class="phone-field">123456789</td>
+						<td class="action-columns">
+							<a href="editar-cliente.html">
+								<img src="../images/editar.png"/>
 							</a>
-							<a href="eliminar-chamba.html">
-								<img src="images/eliminar.png"/>
+							<a href="eliminar-cliente.html">
+								<img src="../images/eliminar.png"/>
 							</a>
 						</td>
-					</tr>		
+					</tr>
 				</table>
-
-
-				
-
-
-
-
-			</div>
+			</div>			
 		</div>
+
+
+
+		
+
+
 	</div>
 </body>
 </html>
