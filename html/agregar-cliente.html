@@ -2,9 +2,18 @@
 <html>
 <head>
 	<title>Chamberos.net - New Client</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/agregar.css">
+
 </head>
 <body>
 	<nav>
@@ -35,6 +44,24 @@
 			<input id="button-new" class="button" type="submit" name="nuevo-cliente" value="New Client"/>
 		</form>
 	</div>
+
+
+
+
+	<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+
+
 
 	<form id="form-new" action="agregado-cliente.html" method="post">
 		<p>ID</p>
