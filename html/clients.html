@@ -14,7 +14,7 @@
 	<!-- My Css files -->
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
-	<link rel="stylesheet" type="text/css" href="../css/clients.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/module.css"/>
 	<script src="../js/clients.js"></script>
 </head>
 
@@ -94,31 +94,32 @@
 				<strong> The client has been created successfully.</strong>
 			</div>
 
-			<div class="table-responsive">
-				<table class="table">
-					
+			<div>
+				<table class="table">					
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Full Name</th>
+							<th>Phone</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
 
-					<tr>
-						<th>ID</th>
-						<th>Full Name</th>
-						<th>Phone</th>
-						<th>Actions</th>
-					</tr>
-
-					<tr>
-						<td class="id-field">2-566-623</td>
-						<td class="name-field">Yamna Luna</td>
-						<td class="phone-field">64910576</td>
-						<td class="action-columns">
-							<a href="editar-cliente.html">
-								<img src="../images/editar.png"/>
-							</a>
-							<a href="eliminar-cliente.html">
-								<img src="../images/eliminar.png"/>
-							</a>
-						</td>
-					</tr>	
-
+						<tr>
+							<td data-label="Id">2-566-623</td>
+							<td data-label="Full name">Yamna Luna</td>
+							<td data-label="Phone">64910576</td>
+							<td data-label="Actions">
+								<a href="editar-cliente.html">
+									<img src="../images/editar.png"/>
+								</a>
+								<a href="eliminar-cliente.html">
+									<img src="../images/eliminar.png"/>
+								</a>
+							</td>
+						</tr>	
+					</tbody>
 
 				</table>
 			</div>

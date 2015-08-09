@@ -14,7 +14,7 @@
 	<!-- My Css files -->
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
-	<link rel="stylesheet" type="text/css" href="../css/chambas.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/module.css"/>
 	<script src="../js/chambas.js"></script>
 </head>
 <body>
@@ -92,47 +92,36 @@
 				<strong> The chamba has been created successfully.</strong>
 			</div>
 
-			<div class="table-responsive">
+			<div>
 				<table class="table">
-
-
-
-
-
-
-
-
-					<tr>
-						<th>Chambas #</th>
-						<th>Date</th>
-						<th>Client</th>
-						<th>Description</th>
-						<th>Notes</th>
-						<th>Actions</th>
-					</tr>
-					<tr>
-						<td class="id-field">1553</td>
-						<td class="date-field">21/04/2015</td>
-						<td class="name-field">Bladimir Arroyo</td>
-						<td class="details-filed">Construcción de una parrilla.</td>
-						<td class="amount-field">En curso</td>
-						<td class="action-field">
-							<a href="editar-chamba.html">
-								<img src="images/editar.png"/>
-							</a>
-							<a href="eliminar-chamba.html">
-								<img src="images/eliminar.png"/>
-							</a>
-						</td>
-					</tr>		
+					<thead>
+						<tr>
+							<th>Chamba #</th>
+							<th>Date</th>
+							<th>Client</th>
+							<th>Description</th>
+							<th>Notes</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-label="Chamba #">1553</td>
+							<td data-label="Date">21/04/2015</td>
+							<td data-label="Client">Bladimir Arroyo</td>
+							<td data-label="Description">Construcción de una parrilla.</td>
+							<td data-label="Notes">En curso</td>
+							<td data-label="Actions">
+								<a href="editar-chamba.html">
+									<img src="../images/editar.png"/>
+								</a>
+								<a href="eliminar-chamba.html">
+									<img src="../images/eliminar.png"/>
+								</a>
+							</td>
+						</tr>	
+					</tbody>	
 				</table>
-
-
-				
-
-
-
-
 			</div>
 		</div>
 	</div>

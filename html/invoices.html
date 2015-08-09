@@ -14,7 +14,7 @@
 	<!-- My Css files -->
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
-	<link rel="stylesheet" type="text/css" href="../css/invoices.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/module.css"/>
 	<script src="../js/invoices.js"></script>
 </head>
 <body>
@@ -93,43 +93,35 @@
 				<strong> The invoices has been created successfully.</strong>
 			</div>
 
-			<div class="table-responsive">
+			<div>
 				<table class="table">
-
-
-
-
-
-
-					<tr>
-						<th>Invoices #</th>
-						<th>Date</th>
-						<th>Client</th>
-						<th>Description</th>
-						<th>Amount</th>
-						<th>Actions</th>
-					</tr>
-					<tr>
-						<td class="id-field">2234</td>
-						<td class="date-field">15/02/2015</td>
-						<td class="name-field">Yamna Luna</td>
-						<td class="details-filed">Corte del césped</td>
-						<td class="amount-field">$50</td>
-						<td class="action-field">
-							<a href="editar-invoice.html">
-								<img src="images/editar.png"/>
-							</a>
-							<a href="eliminar-invoice.html">
-								<img src="images/eliminar.png"/>
-							</a>
-						</td>
-					</tr>
-
-
-
-
-
-							
+					<thead>
+						<tr>
+							<th>Invoices #</th>
+							<th>Date</th>
+							<th>Client</th>
+							<th>Description</th>
+							<th>Amount</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-label="Invoice #">2234</td>
+							<td data-label="Date">15/02/2015</td>
+							<td data-label="Client">Yamna Luna</td>
+							<td data-label="Description">Corte del césped</td>
+							<td data-label="Amount">$50</td>
+							<td data-label="Actions">
+								<a href="editar-invoice.html">
+									<img src="../images/editar.png"/>
+								</a>
+								<a href="eliminar-invoice.html">
+									<img src="../images/eliminar.png"/>
+								</a>
+							</td>
+						</tr>
+					</tbody>							
 				</table>
 			</div>
 		</div>

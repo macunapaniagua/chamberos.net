@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chamberos.net - New User</title>
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
+	<link rel="stylesheet" type="text/css" href="../css/agregar.css">
+	<script src="../js/agregar-user.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">				
+			<div class="thumbnail">
+				<a href="users.html">		
+					<img src="../images/ic_add_user.png"/>
+					<div class="caption">
+						<h4>New User</h4>
+					</div>
+				</a>
+			</div>				
+			<button id="btn-new" class="btn btn-primary">New User</button>
+		</div>
+
+
+		<form>
+			<div class="form-group">
+				<label for="full-name">Full Name</label>
+				<input type="text" class="form-control" id="full-name" placeholder="Full name" required="required">
+			</div>
+			<div class="form-group">
+				<label for="Username">Username</label>
+				<input id="Username" type="text" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
+			</div>			
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="Password" required="required">
+			</div>
+			<div class="form-group">
+				<label for="repeat-password">Repeat password</label>
+				<input type="password" class="form-control" id="repeat-password" placeholder="Repeat password" required="required">
+			</div>
+			<div>
+				<a id="cancel" href="clients.html">Cancel</a>
+				<button id="save" type="button" class="btn btn-success">Save</button>
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>

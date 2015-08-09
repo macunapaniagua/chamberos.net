@@ -14,7 +14,7 @@
 	<!-- My Css files -->
 	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
-	<link rel="stylesheet" type="text/css" href="../css/users.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/module.css"/>
 	<script src="../js/users.js"></script>
 </head>
 
@@ -95,43 +95,34 @@
 				<strong> The user has been created successfully.</strong>
 			</div>
 
-
-
-
-
-
-
-			<div class="table-responsive">
+			<div>
 				<table class="table">	
-					<tr>
-						<th>ID</th>
-						<th>Full Name</th>
-						<th>Password</th>
-						<th>Actions</th>
-					</tr>
-
-					<tr>
-						<td class="id-field">2-566-623</td>
-						<td class="name-field">Yamna Luna</td>
-						<td class="phone-field">123456789</td>
-						<td class="action-columns">
-							<a href="editar-cliente.html">
-								<img src="../images/editar.png"/>
-							</a>
-							<a href="eliminar-cliente.html">
-								<img src="../images/eliminar.png"/>
-							</a>
-						</td>
-					</tr>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Full Name</th>
+							<th>Password</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-label="Id">2-566-623</td>
+							<td data-label="Full name">Yamna Luna</td>
+							<td data-label="Password">123456789</td>
+							<td data-label="Actions">
+								<a href="editar-cliente.html">
+									<img src="../images/editar.png"/>
+								</a>
+								<a href="eliminar-cliente.html">
+									<img src="../images/eliminar.png"/>
+								</a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>			
 		</div>
-
-
-
-		
-
-
 	</div>
 </body>
 </html>
