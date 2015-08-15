@@ -29,6 +29,26 @@
 	background-color: #3cb0fd;
 }
 
+/* Button color */
+.btn-danger {
+	border: none;
+	background-color: #e81212;
+}
+
+.btn-danger:hover {
+	background-color: #f72525;
+}
+
+/* Button color */
+.btn-success {
+	border: none;
+	background-color: #36b82b;
+}
+
+.btn-success:hover {
+	background-color: #5dcc2d;
+}
+
 #table-container {
 	clear: both;
 	text-align: center;
@@ -36,7 +56,8 @@
 
 /* Message */
 #message {
-	display: inline-block;
+	display: none;
+	/* display: inline-block; */
 	color: white;
 	background-color: #36b82b;
 }
@@ -111,4 +132,8 @@ td a img {
 		float: left;
 		font-weight: bold;
 	}
+}
+
+.btn-modal {
+	width: 80px;
 }

@@ -74,12 +74,10 @@
 
 		<div class="jumbotron">				
 			<div class="thumbnail">
-				<a href="clients.html">		
-					<img src="../images/clients.png"/>
-					<div class="caption">
-						<h4>Clients</h4>
-					</div>
-				</a>
+				<img src="../images/clients.png"/>
+				<div class="caption">
+					<h4>Clients</h4>
+				</div>
 			</div>				
 			<button id="btn-new" class="btn btn-primary">New Client</button>
 		</div>
@@ -104,28 +102,35 @@
 							<th>Actions</th>
 						</tr>
 					</thead>
-					<tbody>
-
-						<tr>
-							<td data-label="Id">2-566-623</td>
-							<td data-label="Full name">Yamna Luna</td>
-							<td data-label="Phone">64910576</td>
-							<td data-label="Actions">
-								<a href="editar-cliente.html">
-									<img src="../images/editar.png"/>
-								</a>
-								<a href="eliminar-cliente.html">
-									<img src="../images/eliminar.png"/>
-								</a>
-							</td>
-						</tr>	
-					</tbody>
-
+					<tbody>	</tbody>
 				</table>
 			</div>
 		</div>
 
 
+
+
+
+		<div id="modal-delete" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Delete Client</h4>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure you want to delete the client with name <q><span id='user-to-delete'></span></q>?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-modal btn-danger">No</button>
+						<button id="btnDeleteYes" type="button" data-dismiss="modal" class="btn btn-modal btn-success">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
 	</div>
 </body>
 </html>

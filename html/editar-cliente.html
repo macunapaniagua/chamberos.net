@@ -2,55 +2,107 @@
 <html>
 <head>
 	<title>Chamberos.net - Edit Client</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
+	<link rel="stylesheet" type="text/css" href="../css/agregar.css">
+	<script src="../js/editar-cliente.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li id="selected" class="menu-item">
-				<a href="clients.html">clients</a>
-			</li>
-			<li class="menu-item">
-				<a href="chambas.html">chambas</a>
-			</li>
-			<li class="menu-item">
-				<a href="invoices.html">invoices</a>
-			</li>
-			<li id="menu-user">
-				<img src="images/user-menu-icon.png"/>
-				<a href="dashboard.html">HI macuna</a>
-			</li>
-		</ul>
-	</nav>
+	<div class="container-fluid">
 
-	<div id="submodule-info-container">
-		<div>
-			<img src="images/clients.png"/>
-			<p>Edit Client</p>
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">				
+			<div class="thumbnail">
+				<img src="../images/clients.png"/>
+				<div class="caption">
+					<h4>Edit Client</h4>
+				</div>
+			</div>				
+			<button id="btn-new" class="btn btn-primary">New Client</button>
 		</div>
-		
-		<form action="agregar-cliente.html" method="get">
-			<input id="button-new" class="button" type="submit" name="nuevo-cliente" value="New Client"/>
+
+		<form>
+			<div class="form-group">
+				<label for="id">ID</label>
+				<input id="id" type="text" class="form-control" placeholder="Id" required="required" disabled>
+			</div>
+			<div class="form-group">
+				<label for="fist-name">First Name</label>
+				<input type="text" class="form-control" id="first-name" placeholder="First name" required="required" autofocus="autofocus">
+			</div>
+			<div class="form-group">
+				<label for="last-name">Last Name</label>
+				<input type="text" class="form-control" id="last-name" placeholder="Last Name" required="required">
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" placeholder="Phone" pattern="\b\d{2}[-.]?\d{2}[-.]?\d{2}[-.]?\d{2}\b" required="required">
+			</div>
+			<div>
+				<a id="cancel" href="#">Cancel</a>
+				<button id="save" type="submit" class="btn btn-success">Save</button>
+			</div>
 		</form>
 	</div>
-
-	<form id="form-new" action="editado-cliente.html" method="post">
-		<p>ID</p>
-		<input type="text" name="client-id" value="1-122-453" required="required" autofocus="autofocus"/>
-		<p>First Name</p>
-		<input type="text" name="fist-name" value="Bladimir" required="required"/>
-		<p>Last Name</p>
-		<input type="text" name="last-name" value="Arroyo" required="required"/>
-		<p>Phone</p>
-		<input type="tel" value="84-59-76-15" pattern="\b\d{2}[-.]?\d{2}[-.]?\d{2}[-.]?\d{2}\b" name="client-phone" required="required"/>
-		<div>
-			<a id="cancel" href="clients.html">Cancel</a>
-			<form>
-				<input id="save" class="button" type="submit" value="Save" name="save-client" />
-			</form>
-		</div>
-	</form>
 </body>
 </html>
