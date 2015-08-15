@@ -72,25 +72,22 @@
 
 		<div class="jumbotron">				
 			<div class="thumbnail">
-				<a href="invoices.html">		
-					<img src="../images/invoices.png"/>
-					<div class="caption">
-						<h4>Invoices</h4>
-					</div>
-				</a>
+				<img src="../images/invoices.png"/>
+				<div class="caption">
+					<h4>Invoices</h4>
+				</div>
 			</div>				
 			<button id="btn-new" class="btn btn-primary">New Invoices</button>
 		</div>
 
 
 		<div id="table-container">
-
-			<!-- Alert Box -->	
+			<!-- Alert Box -->
 			<div id="message" class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<strong> The invoices has been created successfully.</strong>
+				<strong> The Invoice has been <span id="message-action"></span> successfully.</strong>
 			</div>
 
 			<div>
@@ -105,24 +102,26 @@
 							<th>Actions</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td data-label="Invoice #">2234</td>
-							<td data-label="Date">15/02/2015</td>
-							<td data-label="Client">Yamna Luna</td>
-							<td data-label="Description">Corte del césped</td>
-							<td data-label="Amount">$50</td>
-							<td data-label="Actions">
-								<a href="editar-invoice.html">
-									<img src="../images/editar.png"/>
-								</a>
-								<a href="eliminar-invoice.html">
-									<img src="../images/eliminar.png"/>
-								</a>
-							</td>
-						</tr>
-					</tbody>							
+					<tbody>	</tbody>							
 				</table>
+			</div>
+
+			<div id="modal-delete" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Delete Invoice</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure you want to delete the invoice number <q><span id='invoice-to-delete'></span></q>?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" data-dismiss="modal" class="btn btn-modal btn-danger">No</button>
+							<button id="btnDeleteYes" type="button" data-dismiss="modal" class="btn btn-modal btn-success">Yes</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

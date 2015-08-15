@@ -2,60 +2,125 @@
 <html>
 <head>
 	<title>Chamberos.net - Edit Invoice</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="images/chamberos-logo.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="css/agregar.css">
+	<link rel="icon" type="image/png" href="../images/chamberos-logo.png" sizes="16x16"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap files and JQuery -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+	<script src="../jquery/jquery-1.11.3.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- My Css files -->
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/images.css"/>	
+	<link rel="stylesheet" type="text/css" href="../css/agregar.css">
+	<script src="../js/editar-invoice.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li class="menu-item">
-				<a href="clients.html">clients</a>
-			</li>
-			<li class="menu-item">
-				<a href="chambas.html">chambas</a>
-			</li>
-			<li id="selected" class="menu-item">
-				<a href="invoices.html">invoices</a>
-			</li>
-			<li id="menu-user">
-				<img src="images/user-menu-icon.png"/>
-				<a href="dashboard.html">HI macuna</a>
-			</li>
-		</ul>
-	</nav>
+	<div class="container-fluid">
 
-	<div id="submodule-info-container">
-		<div>
-			<img src="images/invoices.png"/>
-			<p>Edit Invoice</p>
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">	
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="chambas.html">Chambas</a>
+						</li>
+						<li>
+							<a href="invoices.html">Invoices</a>
+						</li>
+						<li>
+							<a href="users.html">Users</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">							
+							<a id="menu-user" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">								
+								<img id="menu-user-icon" src="../images/user-menu-icon.png"/>
+								<div id="menu-user-name">Hi</div>
+								<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="dashboard.html">Dashboard</a>
+								</li>
+								<li>
+									<a href="#" id="logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron">				
+			<div class="thumbnail">
+				<img src="../images/invoices.png"/>
+				<div class="caption">
+					<h4>Edit Invoice</h4>
+				</div>
+			</div>				
+			<button id="btn-new" class="btn btn-primary">New Invoice</button>
 		</div>
-		
-		<form action="agregar-invoice.html" method="get">
-			<input id="button-new" class="button" type="submit" name="nuevo-invoice" value="New Invoice"/>
+
+		<form>
+			<div class="form-group">
+				<label for="clients-list">Client</label>
+				<input id="clients-list" list="clients" class="form-control" placeholder="Client" required="required" autofocus="autofocus">
+				<datalist id="clients"></datalist>
+			</div>
+			<div class="form-group">
+				<label for="date">Date</label>
+				<input type="date" class="form-control" id="date" placeholder="dd/mm/yyyy" required="required">
+			</div>
+			<div class="form-group">
+				<label for="amount">Amount ($)</label>
+				<input type="text" class="form-control" id="amount" placeholder="Amount" pattern="[0-9]+" required="required">
+			</div>
+			<div class="form-group">
+				<label for="details">Details</label>
+				<textarea id="details" class="form-control" placeholder="Details" rows="5" cols="30"  required="required"></textarea>
+			</div>
+			<div>
+				<a id="cancel" href="#">Cancel</a>
+				<button id="save" type="submit" class="btn btn-success">Save</button>
+			</div>
 		</form>
-	</div>
 
-	<form id="form-new" action="editado-invoice.html" method="post">
-		<p>Client</p>
-		<input list="clients" name="invoice-clients" value="Bladimir Arroyo" required="required" autofocus="autofocus">
-		<datalist id="clients">
-			<option value="Yamna Luna"/>
-			<option value="Bladimir Arroyo"/>
-			<option value="Sonia Segura"/>
-			<option value="Sergio Murillo"/>
-			<option value="Jean Miranda"/>
-		</datalist>
-		<p>Date</p>
-		<input type="date" name="invoice-date" placeholder="dd/mm/yyyy" value="2015-06-14" required="required"/>	
-		<p>Amount ($)</p>
-		<input type="text" pattern="[0-9]+" name="invoice-amount" value="150" required="required"/>	
-		<p>Details</p>
-		<textarea rows="5" cols="30" name="invoice-detail" required="required">Construcción de una parrilla.</textarea>
-		<div>
-			<a id="cancel" href="invoices.html">Cancel</a>
-			<input id="save" class="button" type="submit" value="Save" name="save-invoice" />
+		<div id="modal" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Ups..</h4>
+					</div>
+					<div class="modal-body">
+						<p>The invoice can not be edited beacuse the client of the selected Invoice not longer exist</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-modal btn-danger">Ok</button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</form>
+	</div>
 </body>
 </html>

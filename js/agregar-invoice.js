@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 			}
 		}		
 	})();
-
+	
 	// Logout action
 	jQuery("#logout").click(function(){
 		localStorage.removeItem("logged_user");
@@ -26,59 +26,58 @@ jQuery(document).ready(function() {
 
 	// Button new listener
 	jQuery("#btn-new").click(function(){
-		window.location.replace("agregar-chamba.html");
+		window.location.replace("agregar-invoice.html");
 	});
 
 	// Button cancel listener
 	jQuery("#cancel").click(function(){
-		window.location.replace("chambas.html");
+		window.location.replace("invoices.html");
 	});
 
-	// Object Chamba 
-	var Chamba = function(id, clientName, date, details, notes){
+	// Object Invoice 
+	var Invoice = function(id, clientName, date, details, amount){
 		this.id = id;
 		this.clientName = clientName;
 		this.date = date;
 		this.details = details;
-		this.notes = notes;
+		this.amount = amount;
 	};
 	
 	// Submit Form action
 	jQuery("form").submit(function(event){
 		// Prevent the default submit
 		event.preventDefault();
-		// Get the entered data and create a new chamba object
-		var id = generateChambaId();
+		// Get the entered data and create a new Invoice object
+		var id = generateInvoiceId();
 		var client = jQuery("#clients-list").val();
 		var date = jQuery("#date").val();
 		var details = jQuery("#details").val();
-		var notes = jQuery("#notes").val();
-		var chamba = new Chamba(id, client, date, details, notes);
-		saveChambaInLocalStorage(chamba);
-		window.location.replace("chambas.html?action=added");		
+		var amount = jQuery("#amount").val();
+		var invoice = new Invoice(id, client, date, details, amount);
+		saveInvoiceInLocalStorage(invoice);
+		window.location.replace("invoices.html?action=added");		
 	});
 
-	// Generate the id for the new chamba
-	function generateChambaId(){
-		var chambas = JSON.parse(window.localStorage.getItem("chambas"));
-		// Check if exist any chamba and save the new one
-		if(!chambas){
-			return '2100';
+	// Generate the id for the new Invoice
+	function generateInvoiceId(){
+		var invoices = JSON.parse(window.localStorage.getItem("invoices"));
+		// Check if exist any invoice and save the new one
+		if(!invoices){
+			return '3100';
 		}else{
-
-			return (parseInt(chambas[chambas.length-1].id) + 1).toString();
+			return (parseInt(invoices[invoices.length-1].id) + 1).toString();
 		}
 	};
 
-	// Save the new chamba in the local storage
-	function saveChambaInLocalStorage(chamba){
-		var chambas = JSON.parse(window.localStorage.getItem("chambas"));
-		// Check if exist any chamba and save the new one
-		if(!chambas){
-			window.localStorage.setItem('chambas', JSON.stringify([chamba]));
+	// Save the new invoice in the local storage
+	function saveInvoiceInLocalStorage(invoice){
+		var invoices = JSON.parse(window.localStorage.getItem("invoices"));
+		// Check if exist any invoice and save the new one
+		if(!invoices){
+			window.localStorage.setItem('invoices', JSON.stringify([invoice]));
 		}else{
-			chambas.push(chamba);
-			window.localStorage.setItem('chambas', JSON.stringify(chambas));
+			invoices.push(invoice);
+			window.localStorage.setItem('invoices', JSON.stringify(invoices));
 		}	
 	};
 });
