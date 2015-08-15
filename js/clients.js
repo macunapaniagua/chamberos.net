@@ -1,12 +1,23 @@
 jQuery(document).ready(function() {	
-	// Load the logged user name into the header option 
-	jQuery("#menu-user-name").html("Hi " + localStorage.getItem("logged_user"));
-
-	// Read the Local Storage data and Load the table with the values
-	var a = JSON.parse(window.localStorage.getItem("clients"));
-	for (var i = 0; i < a.length; i++) {
-		createNewRow(a[i]);
-	};
+	
+	// Autoexecuted function when the  window is loading
+	(function(){
+		// Load the logged user name into the header option 
+		jQuery("#menu-user-name").html("Hi " + localStorage.getItem("logged_user"));
+		// Get the action from the querystring
+		var action = window.location.search.substr('?action='.length);		
+		if(action){
+			jQuery('#meesage-action').html(action);
+			jQuery('#message').show();
+		}
+		// Read the Local Storage data and Load the table with the values
+		var clients = JSON.parse(window.localStorage.getItem("clients"));
+		if(clients && clients.length != 0){
+			for (var i = 0; i < clients.length; i++) {
+				createNewRow(clients[i]);
+			}
+		}
+	})();	
 
 	// Create a new row with the client information
 	function createNewRow(client){
@@ -27,11 +38,11 @@ jQuery(document).ready(function() {
 		// Get the row where the clicked button is located
 		var row = jQuery(this).closest("tr");
 		// Get the id of the row
-    	var id = row.find('td').eq(0).html();
+		var id = row.find('td').eq(0).html();
     	// Create the url
-  		var url = 'editar-cliente.html?id=' + id;
-		window.location.replace(url);
-	});
+    	var url = 'editar-cliente.html?id=' + id;
+    	window.location.replace(url);
+    });
 
 	// Search the row to delete and display a modal to confirm the process
 	jQuery(".delete-row").click(function(){
@@ -49,23 +60,23 @@ jQuery(document).ready(function() {
 		var row = jQuery('#modal-delete').data('row');  	
     	// Get the id of the row to delete
     	var id = row.find('td').eq(0).html();
-    	if(romoveFromLocalStorage(id)){
+    	if(removeFromLocalStorage(id)){
     		row.remove();
     	}    	
     });
 
     // Delete a client in the local storage
-    function romoveFromLocalStorage(id){
+    function removeFromLocalStorage(id){
     	var clients = JSON.parse(localStorage.getItem('clients'));
     	for(i = 0; i < clients.length; i++){
     		if(clients[i].id === id){				
     			clients.splice(i, 1);
-				localStorage.setItem('clients', JSON.stringify(clients));
-				return true;			
-			}
-		}
-		return false;
-	}
+    			localStorage.setItem('clients', JSON.stringify(clients));
+    			return true;			
+    		}
+    	}
+    	return false;
+    }
 
 	// Close the session
 	jQuery("#logout").click(function(){

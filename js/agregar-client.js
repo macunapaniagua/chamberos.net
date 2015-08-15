@@ -41,8 +41,9 @@ jQuery(document).ready(function() {
 		var lastName = jQuery("#last-name").val();
 		var phone = jQuery("#phone").val();
 		var cliente = new Client(id, firstName, lastName, phone);
-		saveClientInLocalStorage(cliente);
-		window.location.replace("clients.html");
+		if(saveClientInLocalStorage(cliente)){
+			window.location.replace("clients.html?action=added");
+		}
 	});
 
 	// Save the new client in the local storage
@@ -52,8 +53,24 @@ jQuery(document).ready(function() {
 		if(!clients){
 			window.localStorage.setItem('clients', JSON.stringify([client]));
 		}else{
+			if(selectedIdIsRegistered(client.id, clients)){
+				jQuery("#modal").modal('show');
+				return false;
+			}
 			clients.push(client);
 			window.localStorage.setItem('clients', JSON.stringify(clients));
-		}	
+		}
+		return true;	
 	};
+
+	// Verify if the selected id is already registered
+	function selectedIdIsRegistered(id, clients){
+		for(i = 0; i < clients.length; i++){
+			if(clients[i].id === id){				
+				return true;			
+			}
+		}
+		return false;
+	};
+
 });
