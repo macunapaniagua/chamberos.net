@@ -1,40 +1,59 @@
 var chambaId;
 
 jQuery(document).ready(function() {	
-	// Set the logged user name in the header
-	jQuery("#menu-user-name").html("Hi " + localStorage.getItem("logged_user"));
-
+	
 	// Autoexecuted function to load the User information when the window is loading
 	(function(){
+		// Load the logged user name into the header option
+		var loggedUser = localStorage.getItem("logged_user");	
+		jQuery("#menu-user-name").html("Hi " + loggedUser);
+		// Disable "Add User" option if the loged user is not Administrator
+		if(loggedUser !== 'admin'){
+			jQuery(".user-item-to-hide").hide();
+		}
 		// Get the id from the querystring
 		chambaId = window.location.search.substr('?id='.length);
 		// Get the chama from the local storage that match with the id and load the data into the fields
 		var chambas = JSON.parse(localStorage.getItem('chambas'));
+		var clientName;
 		for (var i = 0; i < chambas.length; i++) {
 			var chamba = chambas[i];
-			if(chamba.id === chambaId){				
-				jQuery("#clients-list").val(chamba.clientName);
+			if(chamba.id === chambaId){		
+				clientName = chamba.clientName;
+				jQuery("#clients-list").val(clientName);		
 				jQuery("#date").val(chamba.date);
 				jQuery("#details").val(chamba.details);
 				jQuery("#notes").val(chamba.notes);
 				break;
 			}
-		}		
+		}
+		// Load the data list values
+		cargarDataList(clientName);
+	})();
 
-alert('Cambiar funcionamiento del modal')
+	function cargarDataList(clientName){
 		// Get the clients to load the client combo box
 		var clients = JSON.parse(localStorage.getItem('clients'));
-		if(!clients || clients.length == 0){
-			jQuery("#clients-list").val('').prop('disabled', true);
+		if(!clients || clients.length == 0){			
 			jQuery('#save').prop('disabled', true);
 			jQuery('#modal').modal('show');
 		} else {
-			var datalist = jQuery('#clients');
+			var dataList = jQuery('#clients');
+			var clientFound = false;
 			for (var i = 0; i < clients.length; i++) {
-				datalist.append('<option value="' + clients[i].firstName + ' ' + clients[i].lastName + '"/>');
+				var currentClient = clients[i].firstName + ' ' + clients[i].lastName;
+				dataList.append('<option value="' + currentClient + '"/>');
+				if(!clientFound && currentClient == clientName){
+					clientFound = true;
+				}
 			}
+			if(!clientFound){
+				dataList.empty();
+				jQuery('#save').prop('disabled', true);
+				jQuery('#modal').modal('show');
+			}			
 		}
-	})();
+	}
 	
 	// Logout action
 	jQuery("#logout").click(function(){

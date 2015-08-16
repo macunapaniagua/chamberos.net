@@ -44,7 +44,7 @@
 						<li>
 							<a href="invoices.html">Invoices</a>
 						</li>
-						<li>
+						<li class='user-item-to-hide active'>
 							<a href="users.html">Users</a>
 						</li>
 					</ul>
@@ -73,25 +73,22 @@
 
 		<div class="jumbotron">				
 			<div class="thumbnail">
-				<a href="users.html">		
-					<img src="../images/ic_add_user.png"/>
-					<div class="caption">
-						<h4>New User</h4>
-					</div>
-				</a>
+				<img src="../images/ic_add_user.png"/>
+				<div class="caption">
+					<h4>New User</h4>
+				</div>
 			</div>				
 			<button id="btn-new" class="btn btn-primary">New User</button>
 		</div>
 
-
 		<form>
 			<div class="form-group">
 				<label for="full-name">Full Name</label>
-				<input type="text" class="form-control" id="full-name" placeholder="Full name" required="required">
+				<input type="text" class="form-control" id="full-name" placeholder="Full name" autofocus="autofocus" required="required">
 			</div>
 			<div class="form-group">
 				<label for="Username">Username</label>
-				<input id="Username" type="text" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
+				<input id="Username" type="text" class="form-control" placeholder="Username" required="required">
 			</div>			
 			<div class="form-group">
 				<label for="password">Password</label>
@@ -102,11 +99,27 @@
 				<input type="password" class="form-control" id="repeat-password" placeholder="Repeat password" required="required">
 			</div>
 			<div>
-				<a id="cancel" href="clients.html">Cancel</a>
-				<button id="save" type="button" class="btn btn-success">Save</button>
+				<a id="cancel" href="#">Cancel</a>
+				<button id="save" type="submit" class="btn btn-success">Save</button>
 			</div>
 		</form>
 
+		<div id="modal" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Ups..</h4>
+					</div>
+					<div class="modal-body">
+						<p id='modal-message'></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" data-dismiss="modal" class="btn btn-modal btn-danger">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

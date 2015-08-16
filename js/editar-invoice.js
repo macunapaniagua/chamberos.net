@@ -1,39 +1,59 @@
 var invoiceId;
 
 jQuery(document).ready(function() {	
-	// Set the logged user name in the header
-	jQuery("#menu-user-name").html("Hi " + localStorage.getItem("logged_user"));
-
+	
 	// Autoexecuted function to load the Invoice information when the window is loading
 	(function(){
+		// Load the logged user name into the header option
+		var loggedUser = localStorage.getItem("logged_user");	
+		jQuery("#menu-user-name").html("Hi " + loggedUser);
+		// Disable "Add User" option if the loged user is not Administrator
+		if(loggedUser !== 'admin'){
+			jQuery(".user-item-to-hide").hide();
+		}
 		// Get the id from the querystring
 		invoiceId = window.location.search.substr('?id='.length);
 		// Get the invoice from the local storage that match with the id and load the data into the fields
 		var invoices = JSON.parse(localStorage.getItem('invoices'));
+		var clientName;
 		for (var i = 0; i < invoices.length; i++) {
 			var invoice = invoices[i];
 			if(invoice.id === invoiceId){				
-				jQuery("#clients-list").val(invoice.clientName);
+				clientName = invoice.clientName;
+				jQuery("#clients-list").val(clientName);
 				jQuery("#date").val(invoice.date);
 				jQuery("#details").val(invoice.details);
 				jQuery("#amount").val(invoice.amount);
 				break;
 			}
 		}		
-
-		// Get the clients to load the client combo box
-		// var clients = JSON.parse(localStorage.getItem('clients'));
-		// if(!clients || clients.length == 0){
-		// 	jQuery("#clients-list").val('').prop('disabled', true);
-		// 	jQuery('#save').prop('disabled', true);
-		// 	jQuery('#modal').modal('show');
-		// } else {
-		// 	var datalist = jQuery('#clients');
-		// 	for (var i = 0; i < clients.length; i++) {
-		// 		datalist.append('<option value="' + clients[i].firstName + ' ' + clients[i].lastName + '"/>');
-		// 	}
-		// }
+		// Load the data list values
+		cargarDataList(clientName);
 	})();
+
+	function cargarDataList(clientName){
+		// Get the clients to load the client combo box
+		var clients = JSON.parse(localStorage.getItem('clients'));
+		if(!clients || clients.length == 0){			
+			jQuery('#save').prop('disabled', true);
+			jQuery('#modal').modal('show');
+		} else {
+			var dataList = jQuery('#clients');
+			var clientFound = false;
+			for (var i = 0; i < clients.length; i++) {
+				var currentClient = clients[i].firstName + ' ' + clients[i].lastName;
+				dataList.append('<option value="' + currentClient + '"/>');
+				if(!clientFound && currentClient == clientName){
+					clientFound = true;
+				}
+			}
+			if(!clientFound){
+				dataList.empty();
+				jQuery('#save').prop('disabled', true);
+				jQuery('#modal').modal('show');
+			}			
+		}
+	}
 	
 	// Logout action
 	jQuery("#logout").click(function(){

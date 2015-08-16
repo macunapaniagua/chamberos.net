@@ -27,5 +27,22 @@
 			<button id="login-button" class="btn btn-primary btn-block" type="button" name="login-button" onClick="logInUser()">Login</button>
 		</form>	
 	</div>
+
+	<div id="modal" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Ups..</h4>
+				</div>
+				<div class="modal-body">
+					<p id='modal-message'></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-modal btn-danger">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

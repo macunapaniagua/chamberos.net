@@ -2,12 +2,17 @@ jQuery(document).ready(function() {
 	
 	// Autoexecuted function when the  window is loading
 	(function(){
-		// Load the logged user name into the header option 
-		jQuery("#menu-user-name").html("Hi " + localStorage.getItem("logged_user"));
+		var loggedUser = localStorage.getItem("logged_user");
+		// Load the logged user name into the header option
+		jQuery("#menu-user-name").html("Hi " + loggedUser);
+		// Disable "Add User" option if the loged user is not Administrator
+		if(loggedUser !== 'admin'){
+			jQuery(".user-item-to-hide").hide();
+		}
 		// Get the action from the querystring
-		var action = window.location.search.substr('?action='.length);		
+		var action = window.location.search.substr('?action='.length);	
 		if(action){
-			jQuery('#meesage-action').html(action);
+			jQuery('#message-action').html(action);
 			jQuery('#message').show();
 		}
 		// Read the Local Storage data and Load the table with the values
