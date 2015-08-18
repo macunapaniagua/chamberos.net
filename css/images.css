@@ -1,18 +1,1 @@
-.thumbnail{
-	display: inline-block;
-	background-color: inherit;
-	border: none;
-	margin: 0 auto 0 40px;
-}
-
-h4 {	
-	color: #555;
-}
-
-.thumbnail a {
-	text-decoration: none;
-}
-
-.caption{
-	margin-top: -15px;
-}
+.thumbnail{display:inline-block;background-color:inherit;border:none;margin:0 auto 0 40px}h4{color:#555}.thumbnail a{text-decoration:none}.caption{margin-top:-15px}

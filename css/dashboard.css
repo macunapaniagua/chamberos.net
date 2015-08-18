@@ -1,18 +1,1 @@
-/* Style for Welcome Label */
-#welcome {	
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin: 5% auto 5%;
-	text-align: center;
-	font-size: 30px;	
-	word-wrap: break-word;
-}
-
-/* Dashboard Container */
-#dashboard-options-container {
-	position: relative;
-	padding-top: 5%;
-	padding-bottom: 10%;
-	text-align: center;
-}
+#welcome{position:relative;width:100%;height:auto;margin:5% auto;text-align:center;font-size:30px;word-wrap:break-word}#dashboard-options-container{position:relative;padding-top:5%;padding-bottom:10%;text-align:center}
